@@ -118,6 +118,7 @@ def purchaseItem(item, price, inStock, pos):
                     print(
                         "Purchase successful. Your transaction id: {transactionX}".format(transactionX=transactionID));
                     # Creates log of transaction
+                    items[pos][2] = items[pos][2] - 1;
                     createLog(str(transactionID), str(item), str(price), 0);
                 else:
                     # Works out the change
